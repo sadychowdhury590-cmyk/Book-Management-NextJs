@@ -2,11 +2,15 @@
 
 import { BooksContext } from "@/app/context/BookContext";
 import { Ibook } from "@/types/books.types";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 
+interface BooksContextType {
+  readBooks: Ibook[]
+  setReadBooks: React.Dispatch<React.SetStateAction<Ibook[]>>
+}
 const ReadNowBtn = ({book}:{book:Ibook}) => {
-    const { readBooks,setReadBooks}=useContext(BooksContext)
+    const { readBooks,setReadBooks}:BooksContextType=useContext(BooksContext)
     const handleReadBook=()=>{
               setReadBooks([...readBooks,book])
                 toast.success(`Successfully added to ReadList ${book.bookName}`)
