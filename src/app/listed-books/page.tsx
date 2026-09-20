@@ -1,7 +1,7 @@
 'use client'
 
 import { BooksContext } from '@/app/context/BookContext'
-import React, { useContext, useState } from 'react'
+import  { useContext, useState } from 'react'
 import ListCard from '../components/shared/ListCard'
 import { Ibook } from '@/types/books.types'
 

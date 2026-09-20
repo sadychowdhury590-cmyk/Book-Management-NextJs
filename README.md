@@ -314,13 +314,7 @@ Start the development server:
 npm run dev
 ```
 
-Open:
 
-```text
-http://localhost:3000
-```
-
----
 
 ## ⚙️ Available Scripts
 
