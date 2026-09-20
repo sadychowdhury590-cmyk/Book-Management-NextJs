@@ -2,7 +2,7 @@ import React from 'react';
 import BooksCard from './BooksCard';
 import { Ibook } from '@/types/books.types';
 const getData=async()=>{
-    const res=await fetch("http://localhost:3000/booksData.json")
+   const res=await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`)
     const data=await res.json()
     return data
 }
